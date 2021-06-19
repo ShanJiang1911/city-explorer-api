@@ -1,8 +1,19 @@
-const express = require('express');
-const app = express();
-const axios = require('axios');
+'use strict';
+
 require('dotenv').config();
+const express = require('express');
 const cors = require('cors');
+
+const getWeather = require('./routeHandlers/weather.js');
+const app = express();
+
+
+
+
+
+
+const axios = require('axios');
+
 const { response } = require('express')
 app.use(cors());
 const PORT = process.env.PORT || 3002;
@@ -10,8 +21,6 @@ const PORT = process.env.PORT || 3002;
 //Above are reuquired basics
 //----------------------------------------
 
-
-const getWeather = require('./routeHandlers/weather.js');
 
 const getMovie = require('./routeHandlers/movie.js');
 
